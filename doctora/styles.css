@@ -1,0 +1,1126 @@
+:root {
+  --rigoni-primary: #006b73;
+  --rigoni-primary-dark: #0b4b50;
+  --rigoni-primary-soft: #dcefee;
+  --rigoni-accent: #9ed3d4;
+  --rigoni-warm: #f6efe5;
+  --rigoni-sand: #eadbca;
+  --rigoni-ink: #29474b;
+  --rigoni-copy: #426368;
+  --rigoni-surface: #fffdf9;
+  --rigoni-surface-strong: #fff;
+  --rigoni-border: rgba(0, 107, 115, 0.14);
+  --rigoni-shadow: 0 20px 50px rgba(17, 55, 58, 0.1);
+  --rigoni-shadow-strong: 0 28px 72px rgba(12, 56, 60, 0.16);
+  --rigoni-radius: 30px;
+  --rigoni-radius-sm: 18px;
+  --rigoni-transition: 180ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', system-ui, sans-serif;
+  color: var(--rigoni-ink);
+  background:
+    radial-gradient(circle at top left, rgba(158, 211, 212, 0.28), transparent 32%),
+    radial-gradient(circle at 85% 20%, rgba(0, 107, 115, 0.14), transparent 24%),
+    linear-gradient(180deg, #f8f4ee 0%, #f5f8f7 40%, #f8faf9 100%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+main,
+section {
+  position: relative;
+}
+
+[id] {
+  scroll-margin-top: 110px;
+}
+
+.rigoni-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.rigoni-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(18px);
+  background: rgba(248, 244, 238, 0.76);
+  border-bottom: 1px solid transparent;
+  transition: background var(--rigoni-transition), border-color var(--rigoni-transition), box-shadow var(--rigoni-transition);
+}
+
+.rigoni-header.is-scrolled {
+  background: rgba(248, 244, 238, 0.92);
+  border-color: rgba(0, 107, 115, 0.12);
+  box-shadow: 0 10px 32px rgba(17, 55, 58, 0.06);
+}
+
+.rigoni-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 82px;
+}
+
+.rigoni-brand {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.rigoni-brand__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rigoni-primary);
+}
+
+.rigoni-brand__title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.65rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--rigoni-ink);
+}
+
+.rigoni-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.rigoni-nav a,
+.rigoni-footer__links a,
+.rigoni-detail-card a {
+  text-decoration: none;
+}
+
+.rigoni-nav a {
+  position: relative;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(22, 54, 58, 0.78);
+}
+
+.rigoni-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  background: var(--rigoni-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--rigoni-transition);
+}
+
+.rigoni-nav a:hover::after,
+.rigoni-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.rigoni-header__actions {
+  display: flex;
+  align-items: center;
+}
+
+.rigoni-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform var(--rigoni-transition), background var(--rigoni-transition), color var(--rigoni-transition), border-color var(--rigoni-transition), box-shadow var(--rigoni-transition);
+}
+
+.rigoni-button:hover,
+.rigoni-button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.rigoni-button--solid {
+  background: linear-gradient(135deg, var(--rigoni-primary) 0%, #0c888f 100%);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(0, 107, 115, 0.24);
+}
+
+.rigoni-button--solid:hover,
+.rigoni-button--solid:focus-visible {
+  background: linear-gradient(135deg, var(--rigoni-primary-dark) 0%, var(--rigoni-primary) 100%);
+}
+
+.rigoni-button--ghost {
+  border-color: rgba(0, 107, 115, 0.2);
+  background: rgba(255, 255, 255, 0.56);
+  color: var(--rigoni-primary-dark);
+}
+
+.rigoni-button--ghost:hover,
+.rigoni-button--ghost:focus-visible {
+  border-color: rgba(0, 107, 115, 0.35);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.rigoni-button--light {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.rigoni-button--light:hover,
+.rigoni-button--light:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.rigoni-button--full {
+  width: 100%;
+}
+
+.rigoni-menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--rigoni-primary-dark);
+  cursor: pointer;
+}
+
+.rigoni-menu-button span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px auto;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform var(--rigoni-transition), opacity var(--rigoni-transition);
+}
+
+.rigoni-menu-button.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.rigoni-menu-button.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.rigoni-menu-button.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.rigoni-mobile-nav {
+  display: none;
+  padding: 0 20px 20px;
+}
+
+.rigoni-mobile-nav.is-open {
+  display: grid;
+  gap: 10px;
+}
+
+.rigoni-mobile-nav a {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 107, 115, 0.1);
+  color: var(--rigoni-primary-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.rigoni-mobile-nav a:last-child {
+  border-bottom: 0;
+  margin-top: 8px;
+}
+
+.rigoni-hero {
+  overflow: clip;
+  padding: 70px 0 88px;
+}
+
+.rigoni-hero::before,
+.rigoni-hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.rigoni-hero::before {
+  width: 440px;
+  height: 440px;
+  top: -110px;
+  right: -120px;
+  background: radial-gradient(circle, rgba(0, 107, 115, 0.16) 0%, rgba(0, 107, 115, 0) 72%);
+}
+
+.rigoni-hero::after {
+  width: 280px;
+  height: 280px;
+  bottom: 20px;
+  left: -40px;
+  background: radial-gradient(circle, rgba(234, 219, 202, 0.72) 0%, rgba(234, 219, 202, 0) 72%);
+}
+
+.rigoni-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.rigoni-kicker,
+.rigoni-section__eyebrow,
+.rigoni-portrait-card__eyebrow,
+.rigoni-timeline__label,
+.rigoni-detail-card__label,
+.rigoni-footer__eyebrow {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.rigoni-kicker,
+.rigoni-section__eyebrow,
+.rigoni-portrait-card__eyebrow,
+.rigoni-timeline__label,
+.rigoni-detail-card__label,
+.rigoni-footer__eyebrow {
+  color: var(--rigoni-primary);
+}
+
+.rigoni-display,
+.rigoni-section__title,
+.rigoni-portrait-card__body h2,
+.rigoni-contact-panel .rigoni-section__title {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: var(--rigoni-ink);
+}
+
+.rigoni-display {
+  margin-top: 12px;
+  font-size: clamp(3.4rem, 7vw, 5.4rem);
+  line-height: 0.95;
+  max-width: 11ch;
+}
+
+.rigoni-lead,
+.rigoni-section__summary,
+.rigoni-story-card__copy p,
+.rigoni-contact-panel__text,
+.rigoni-portrait-card__body p,
+.rigoni-care-card p,
+.rigoni-study-card p,
+.rigoni-detail-card p,
+.rigoni-footer__copy,
+.rigoni-story-figure figcaption,
+.rigoni-certificate-card figcaption,
+.rigoni-timeline__item p,
+.rigoni-highlights li span {
+  color: var(--rigoni-copy);
+  line-height: 1.75;
+}
+
+.rigoni-lead {
+  margin: 22px 0 0;
+  font-size: 1.08rem;
+  font-weight: 500;
+  max-width: 58ch;
+}
+
+.rigoni-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.rigoni-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 30px 0 0;
+  list-style: none;
+}
+
+.rigoni-facts li {
+  padding: 11px 15px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(0, 107, 115, 0.12);
+  box-shadow: 0 10px 24px rgba(17, 55, 58, 0.04);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--rigoni-primary-dark);
+}
+
+.rigoni-hero__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: auto;
+  padding-bottom: 0;
+}
+
+.rigoni-portrait-card {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  border-radius: 38px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(249, 253, 252, 0.96) 100%);
+  border: 1px solid rgba(0, 107, 115, 0.1);
+  box-shadow: var(--rigoni-shadow-strong);
+}
+
+.rigoni-portrait-card__image {
+  aspect-ratio: 5 / 5.5;
+  background: linear-gradient(180deg, rgba(220, 239, 238, 0.6) 0%, rgba(255, 255, 255, 0.14) 100%);
+}
+
+.rigoni-portrait-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.rigoni-portrait-card__body {
+  padding: 26px 28px 30px;
+}
+
+.rigoni-portrait-card__body h2 {
+  margin-top: 10px;
+  font-size: 2.05rem;
+  line-height: 0.98;
+}
+
+.rigoni-portrait-card__body p {
+  margin: 14px 0 0;
+  font-size: 0.98rem;
+}
+
+.rigoni-floating-card {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  z-index: 3;
+  width: min(352px, 68%);
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  margin: 18px 24px 0 0;
+  border-radius: 24px;
+  background: rgba(12, 75, 80, 0.94);
+  color: #fff;
+  box-shadow: 0 22px 50px rgba(7, 43, 46, 0.24);
+}
+
+.rigoni-floating-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.rigoni-floating-card strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.rigoni-floating-card span {
+  display: block;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.55;
+  font-size: 0.88rem;
+}
+
+.rigoni-section {
+  padding: 88px 0;
+}
+
+.rigoni-section--story {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.52) 16%, rgba(255, 255, 255, 0.82) 100%);
+}
+
+.rigoni-section--formation {
+  background:
+    linear-gradient(180deg, rgba(220, 239, 238, 0.4) 0%, rgba(255, 255, 255, 0.74) 100%);
+}
+
+.rigoni-section--care {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(234, 219, 202, 0.64) 0%, rgba(234, 219, 202, 0) 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(245, 248, 247, 0.92) 100%);
+}
+
+.rigoni-section--studies {
+  background: linear-gradient(180deg, #fbfdfd 0%, #eef5f4 100%);
+}
+
+.rigoni-section--contact {
+  padding-bottom: 110px;
+}
+
+.rigoni-section__intro {
+  max-width: 760px;
+  margin-bottom: 44px;
+}
+
+.rigoni-section__title {
+  margin-top: 10px;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 0.96;
+}
+
+.rigoni-section__summary {
+  margin: 18px 0 0;
+  font-size: 1.02rem;
+}
+
+.rigoni-story-grid,
+.rigoni-formation-grid,
+.rigoni-care-layout,
+.rigoni-contact-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.rigoni-story-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.92fr);
+  align-items: stretch;
+}
+
+.rigoni-story-card,
+.rigoni-story-figure,
+.rigoni-timeline,
+.rigoni-certificate-card,
+.rigoni-care-card,
+.rigoni-study-card,
+.rigoni-contact-panel,
+.rigoni-detail-card {
+  border: 1px solid var(--rigoni-border);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--rigoni-shadow);
+}
+
+.rigoni-story-card,
+.rigoni-timeline,
+.rigoni-contact-panel {
+  border-radius: var(--rigoni-radius);
+  padding: 30px;
+}
+
+.rigoni-story-card__copy p:first-child,
+.rigoni-timeline__item p,
+.rigoni-care-card p,
+.rigoni-study-card p,
+.rigoni-detail-card p {
+  margin-top: 0;
+}
+
+.rigoni-story-card__copy p:last-child,
+.rigoni-timeline__item p:last-child,
+.rigoni-care-card p:last-child,
+.rigoni-study-card p:last-child,
+.rigoni-detail-card p:last-child {
+  margin-bottom: 0;
+}
+
+.rigoni-highlights {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+.rigoni-highlights li {
+  padding: 18px 18px 18px 22px;
+  border-radius: 22px;
+  background: rgba(220, 239, 238, 0.42);
+  border-left: 4px solid var(--rigoni-primary);
+}
+
+.rigoni-highlights li strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.rigoni-story-figure {
+  overflow: hidden;
+  border-radius: calc(var(--rigoni-radius) + 4px);
+}
+
+.rigoni-story-figure img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.rigoni-story-figure figcaption {
+  padding: 20px 24px 24px;
+  font-size: 0.96rem;
+}
+
+.rigoni-formation-grid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: stretch;
+}
+
+.rigoni-timeline {
+  display: grid;
+  gap: 18px;
+  height: 100%;
+}
+
+.rigoni-timeline__item {
+  position: relative;
+  padding: 0 0 0 22px;
+}
+
+.rigoni-timeline__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--rigoni-primary);
+  box-shadow: 0 0 0 6px rgba(0, 107, 115, 0.12);
+}
+
+.rigoni-timeline__item h3,
+.rigoni-care-card h3,
+.rigoni-study-card h3,
+.rigoni-detail-card h3 {
+  margin: 8px 0 10px;
+  font-size: 1.14rem;
+  line-height: 1.35;
+}
+
+.rigoni-certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 22px;
+  border-radius: var(--rigoni-radius);
+  border: 1px solid var(--rigoni-border);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--rigoni-shadow);
+}
+
+.rigoni-certificate-card {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 180px minmax(0, 1fr);
+  height: 100%;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid rgba(0, 107, 115, 0.12);
+  background: linear-gradient(180deg, rgba(246, 251, 250, 0.96) 0%, rgba(255, 255, 255, 0.98) 100%);
+  box-shadow: none;
+}
+
+.rigoni-certificate-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+  background: linear-gradient(180deg, #eef6f5 0%, #fbfdfd 100%);
+}
+
+.rigoni-certificate-card figcaption {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 18px 18px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.rigoni-care-layout {
+  grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.98fr);
+  align-items: start;
+}
+
+.rigoni-care-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.rigoni-care-card {
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.rigoni-care-card h3 {
+  margin-top: 0;
+}
+
+.rigoni-care-visuals {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-areas:
+    "tall top"
+    "tall bottom";
+  gap: 16px;
+}
+
+.rigoni-care-figure {
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--rigoni-border);
+  box-shadow: var(--rigoni-shadow);
+  min-height: 0;
+}
+
+.rigoni-care-figure--tall {
+  grid-area: tall;
+}
+
+.rigoni-care-figure:nth-child(2) {
+  grid-area: top;
+}
+
+.rigoni-care-figure:nth-child(3) {
+  grid-area: bottom;
+}
+
+.rigoni-care-figure img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.rigoni-care-figure--tall img {
+  object-position: center top;
+}
+
+.rigoni-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.rigoni-study-card {
+  min-height: 100%;
+  padding: 22px;
+  border-radius: 24px;
+}
+
+.rigoni-study-card__index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: var(--rigoni-primary-soft);
+  color: var(--rigoni-primary);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.rigoni-contact-grid {
+  grid-template-columns: minmax(0, 0.98fr) minmax(340px, 0.82fr);
+  align-items: stretch;
+}
+
+.rigoni-contact-panel {
+  padding: 34px;
+  background: linear-gradient(145deg, var(--rigoni-primary-dark) 0%, var(--rigoni-primary) 100%);
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(12, 75, 80, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.rigoni-contact-panel .rigoni-section__eyebrow,
+.rigoni-contact-panel .rigoni-section__title,
+.rigoni-contact-panel__phone {
+  color: #fff;
+}
+
+.rigoni-contact-panel__text {
+  max-width: 50ch;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 18px 0 0;
+}
+
+.rigoni-contact-panel__phone {
+  display: inline-block;
+  margin-top: 22px;
+  text-decoration: none;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.rigoni-contact-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 26px;
+}
+
+.rigoni-contact-side {
+  display: grid;
+  gap: 18px;
+  height: 100%;
+}
+
+.rigoni-detail-card {
+  border-radius: 26px;
+  padding: 24px;
+}
+
+.rigoni-detail-card h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.9rem;
+  line-height: 0.95;
+}
+
+.rigoni-detail-card a {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 14px;
+  color: var(--rigoni-primary);
+  font-weight: 700;
+}
+
+.rigoni-detail-card--image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.rigoni-detail-card--image img {
+  width: 100%;
+  height: 286px;
+  object-fit: cover;
+  object-position: center 47%;
+}
+
+.rigoni-footer {
+  padding: 0 0 36px;
+}
+
+.rigoni-footer__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 107, 115, 0.12);
+}
+
+.rigoni-footer__copy {
+  margin: 10px 0 0;
+  max-width: 50ch;
+  font-size: 0.94rem;
+}
+
+.rigoni-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.rigoni-footer__links a {
+  font-weight: 700;
+  color: var(--rigoni-primary-dark);
+}
+
+.rigoni-wa-bubble {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.35);
+  transition: transform var(--rigoni-transition), box-shadow var(--rigoni-transition);
+}
+
+.rigoni-wa-bubble:hover,
+.rigoni-wa-bubble:focus-visible {
+  transform: scale(1.06);
+  box-shadow: 0 20px 34px rgba(37, 211, 102, 0.42);
+}
+
+.rigoni-wa-bubble svg {
+  width: 28px;
+  height: 28px;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 1120px) {
+  .rigoni-hero__grid,
+  .rigoni-story-grid,
+  .rigoni-formation-grid,
+  .rigoni-care-layout,
+  .rigoni-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rigoni-hero__visual {
+    min-height: auto;
+  }
+
+  .rigoni-portrait-card {
+    max-width: 620px;
+    margin-left: auto;
+  }
+
+  .rigoni-floating-card {
+    width: min(460px, 100%);
+    margin: 18px 0 0;
+  }
+
+  .rigoni-studies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .rigoni-nav,
+  .rigoni-header__actions {
+    display: none;
+  }
+
+  .rigoni-menu-button {
+    display: inline-block;
+  }
+
+  .rigoni-hero {
+    padding-top: 42px;
+  }
+
+  .rigoni-display {
+    max-width: 100%;
+    font-size: clamp(2.9rem, 12vw, 4.4rem);
+  }
+
+  .rigoni-floating-card {
+    grid-template-columns: 96px minmax(0, 1fr);
+    margin-top: 18px;
+  }
+
+  .rigoni-care-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rigoni-care-visuals {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "top top"
+      "tall bottom";
+  }
+}
+
+@media (max-width: 720px) {
+  .rigoni-shell {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .rigoni-header__inner {
+    min-height: 74px;
+  }
+
+  .rigoni-brand__title {
+    font-size: 1.35rem;
+  }
+
+  .rigoni-hero,
+  .rigoni-section {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .rigoni-hero__grid {
+    gap: 34px;
+  }
+
+  .rigoni-lead,
+  .rigoni-section__summary {
+    font-size: 1rem;
+  }
+
+  .rigoni-story-card,
+  .rigoni-timeline,
+  .rigoni-contact-panel,
+  .rigoni-detail-card,
+  .rigoni-care-card,
+  .rigoni-study-card {
+    padding: 22px;
+  }
+
+  .rigoni-certificate-grid,
+  .rigoni-studies-grid,
+  .rigoni-care-visuals {
+    grid-template-columns: 1fr;
+  }
+
+  .rigoni-certificate-grid {
+    height: auto;
+  }
+
+  .rigoni-care-visuals {
+    grid-template-areas:
+      "tall"
+      "top"
+      "bottom";
+  }
+
+  .rigoni-portrait-card__body h2 {
+    font-size: 1.8rem;
+  }
+
+  .rigoni-contact-panel__phone {
+    font-size: 1.95rem;
+  }
+
+  .rigoni-contact-panel__actions,
+  .rigoni-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rigoni-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 540px) {
+  .rigoni-hero {
+    padding-top: 32px;
+  }
+
+  .rigoni-portrait-card {
+    border-radius: 28px;
+  }
+
+  .rigoni-portrait-card__body,
+  .rigoni-story-figure figcaption {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .rigoni-floating-card {
+    width: 100%;
+    grid-template-columns: 1fr;
+    margin-top: 14px;
+    margin-right: 0;
+  }
+
+  .rigoni-floating-card img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .rigoni-certificate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rigoni-detail-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .rigoni-wa-bubble {
+    right: 16px;
+    bottom: 16px;
+  }
+}
