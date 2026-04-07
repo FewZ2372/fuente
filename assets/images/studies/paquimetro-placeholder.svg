@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="54" x2="688" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5FBFB"/>
+      <stop offset="1" stop-color="#E3F3F4"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="532" y1="92" x2="660" y2="284" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#006B73" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#2A9FA5" stop-opacity=".38"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" rx="40" fill="url(#bg)"/>
+  <rect x="46" y="46" width="708" height="468" rx="30" fill="#FFF" fill-opacity=".82" stroke="#C9E3E5" stroke-width="4"/>
+  <circle cx="646" cy="150" r="92" fill="url(#accent)"/>
+  <rect x="138" y="188" width="250" height="152" rx="22" fill="#FFF" stroke="#9CCFD3" stroke-width="10"/>
+  <rect x="428" y="208" width="70" height="176" rx="24" fill="#E3F3F4"/>
+  <rect x="520" y="166" width="128" height="230" rx="32" fill="#D6EEF0"/>
+  <rect x="270" y="372" width="306" height="24" rx="12" fill="#B7DEE0"/>
+  <text x="88" y="120" fill="#004D53" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Paquimetro</text>
+  <text x="88" y="452" fill="#006B73" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Imagen provisoria</text>
+  <text x="88" y="486" fill="#5B7A7D" font-family="Inter, Arial, sans-serif" font-size="20">Reemplazar por foto real del equipo</text>
+</svg>
