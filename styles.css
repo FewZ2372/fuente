@@ -805,6 +805,24 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 1025px) {
+  .pv-services__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .pv-study-card {
+    grid-column: span 2;
+  }
+
+  .pv-study-card:nth-last-child(2):nth-child(3n + 1) {
+    grid-column: 2 / span 2;
+  }
+
+  .pv-study-card:last-child:nth-child(3n + 2) {
+    grid-column: 4 / span 2;
+  }
+}
+
 .pv-modal {
   position: fixed;
   inset: 0;
