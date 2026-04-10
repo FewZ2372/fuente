@@ -58,6 +58,8 @@ if ('IntersectionObserver' in window) {
 const studyModal = document.getElementById('studyModal');
 const studyModalTitle = document.getElementById('studyModalTitle');
 const studyModalBody = document.getElementById('studyModalBody');
+const studyModalMedia = document.getElementById('studyModalMedia');
+const studyModalImage = document.getElementById('studyModalImage');
 const studyTriggers = document.querySelectorAll('.pv-study-trigger');
 const modalCloseTargets = document.querySelectorAll('[data-close-modal]');
 
@@ -71,13 +73,26 @@ function closeStudyModal() {
   document.body.style.overflow = '';
 }
 
-function openStudyModal(title, body) {
+function openStudyModal(title, body, image, imageAlt) {
   if (!studyModal || !studyModalTitle || !studyModalBody) {
     return;
   }
 
   studyModalTitle.textContent = title;
   studyModalBody.textContent = body;
+
+  if (studyModalMedia && studyModalImage) {
+    if (image) {
+      studyModalImage.src = image;
+      studyModalImage.alt = imageAlt || '';
+      studyModalMedia.hidden = false;
+    } else {
+      studyModalImage.removeAttribute('src');
+      studyModalImage.alt = '';
+      studyModalMedia.hidden = true;
+    }
+  }
+
   studyModal.classList.add('is-open');
   studyModal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
@@ -88,6 +103,8 @@ studyTriggers.forEach((trigger) => {
     openStudyModal(
       trigger.getAttribute('data-study-title') || '',
       trigger.getAttribute('data-study-body') || '',
+      trigger.getAttribute('data-study-image') || '',
+      trigger.getAttribute('data-study-image-alt') || '',
     );
   });
 });

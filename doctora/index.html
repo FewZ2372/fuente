@@ -3,32 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Presentación profesional de la Dra. María Juliana Rigoni, médica oftalmóloga y cirujana en San Martín de los Andes.">
-  <meta name="theme-color" content="#006b73">
+  <meta name="description" content="Presentación profesional de la Dra. María Juliana Rigoni, médica oftalmóloga en San Martín de los Andes.">
+  <meta name="theme-color" content="#0f5c62">
   <title>Dra. María Juliana Rigoni | Oftalmología en San Martín de los Andes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="rigoni-page" id="inicio">
-  <header class="rigoni-header" id="siteHeader">
+  <header class="rigoni-header">
     <div class="rigoni-shell rigoni-header__inner">
-      <a class="rigoni-brand" href="../index.html" aria-label="Volver a Vision Andina">
-        <span class="rigoni-brand__eyebrow">Vision Andina</span>
-        <span class="rigoni-brand__title">Dra. María Juliana Rigoni</span>
+      <a class="rigoni-brand" href="#inicio" aria-label="Inicio del sitio de la Dra. María Juliana Rigoni">
+        <img class="rigoni-brand__logo" src="../imgs%20dra%20rigoni/2LogoRigoni@300x.png" alt="">
       </a>
 
       <nav class="rigoni-nav" aria-label="Navegación principal">
-        <a href="#trayectoria">Trayectoria</a>
-        <a href="#atencion">Atención</a>
-        <a href="#estudios">Estudios</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#presentacion">Presentación</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="./trayectoria/">Trayectoria</a>
       </nav>
-
-      <div class="rigoni-header__actions">
-        <a class="rigoni-button rigoni-button--solid" href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" target="_blank" rel="noopener">Pedir turno</a>
-      </div>
 
       <button class="rigoni-menu-button" id="menuButton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
         <span></span>
@@ -38,340 +33,135 @@
     </div>
 
     <nav class="rigoni-mobile-nav" id="mobileMenu" aria-label="Menú móvil">
-      <a href="#trayectoria">Trayectoria</a>
-      <a href="#atencion">Atención</a>
-      <a href="#estudios">Estudios</a>
-      <a href="#contacto">Contacto</a>
-      <a class="rigoni-button rigoni-button--solid rigoni-button--full" href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" target="_blank" rel="noopener">Pedir turno por WhatsApp</a>
+      <a href="#presentacion">Presentación</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="./trayectoria/">Trayectoria</a>
     </nav>
   </header>
 
   <main>
-    <section class="rigoni-hero">
-      <div class="rigoni-shell rigoni-hero__grid">
-        <div class="rigoni-hero__copy">
-          <p class="rigoni-kicker">Oftalmología clínica, infantil y glaucoma</p>
-          <h1 class="rigoni-display">Dra. María Juliana Rigoni</h1>
-          <p class="rigoni-lead">
-            Médica oftalmóloga y cirujana con atención de recién nacidos, niños y adultos.
-            Su práctica integra consulta clínica, estudios diagnósticos y seguimiento de patologías oculares
-            con especial foco en glaucoma y salud visual infantil.
-          </p>
-
-          <div class="rigoni-hero__actions">
-            <a class="rigoni-button rigoni-button--solid" href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" target="_blank" rel="noopener">Solicitar turno</a>
-            <a class="rigoni-button rigoni-button--ghost" href="#trayectoria">Conocer su trayectoria</a>
+    <section class="rigoni-intro" id="presentacion" aria-labelledby="presentacion-heading">
+      <div class="rigoni-shell">
+        <article class="rigoni-intro__card">
+          <p class="rigoni-section-label">Presentación</p>
+          <h1 class="rigoni-display" id="presentacion-heading">Dra. María Juliana Rigoni</h1>
+          <div class="rigoni-intro__text">
+            <p>Médica oftalmóloga y cirujana con atención para adultos, niños y recién nacidos en San Martín de los Andes.</p>
+            <p>Su <a class="rigoni-inline-link" href="./trayectoria/">trayectoria</a> combina formación universitaria, práctica hospitalaria y trabajo en consultorio, con foco en el seguimiento clínico, el glaucoma y la salud visual infantil.</p>
           </div>
+        </article>
+      </div>
+    </section>
 
-          <ul class="rigoni-facts" aria-label="Áreas principales">
-            <li>Adultos, niños y recién nacidos</li>
-            <li>Glaucoma</li>
-            <li>Oftalmología infantil</li>
-            <li>MABAC y Hospital Dr. Ramón Carrillo</li>
-          </ul>
+    <section class="rigoni-gallery" id="fotos" aria-labelledby="fotos-heading">
+      <div class="rigoni-shell">
+        <div class="rigoni-section-header">
+          <p class="rigoni-section-label">Fotos</p>
+          <h2 class="rigoni-section-title" id="fotos-heading">Consultorio y práctica diaria</h2>
         </div>
 
-        <div class="rigoni-hero__visual">
-          <article class="rigoni-portrait-card">
-            <div class="rigoni-portrait-card__image">
-              <img src="../assets/images/doctora/portrait-rigoni.webp" alt="Retrato profesional de la Dra. María Juliana Rigoni" fetchpriority="high">
+        <div class="rigoni-carousel" data-carousel>
+          <div class="rigoni-carousel__viewport">
+            <div class="rigoni-carousel__track" data-carousel-track>
+              <figure class="rigoni-carousel__slide rigoni-carousel__slide--shift-30 is-active">
+                <img src="../assets/images/doctora/doctora-rigoni-parada.jpeg" alt="La Dra. Rigoni en el consultorio junto al equipamiento oftalmológico" loading="eager">
+                <figcaption>Consultorio y atención en San Martín de los Andes.</figcaption>
+              </figure>
+              <figure class="rigoni-carousel__slide">
+                <img src="../assets/images/doctora/portrait-rigoni.webp" alt="Retrato profesional de la Dra. María Juliana Rigoni" loading="lazy">
+                <figcaption>Presentación profesional.</figcaption>
+              </figure>
+              <figure class="rigoni-carousel__slide">
+                <img src="../assets/images/doctora/consulta-rigoni.webp" alt="La Dra. Rigoni realizando una consulta oftalmológica" loading="lazy">
+                <figcaption>Consulta oftalmológica en consultorio.</figcaption>
+              </figure>
+              <figure class="rigoni-carousel__slide rigoni-carousel__slide--shift-30">
+                <img src="../assets/images/doctora/consulta-cartel-rigoni.jpeg" alt="La Dra. Rigoni en un espacio de atención visual" loading="lazy">
+                <figcaption>Trabajo clínico diario.</figcaption>
+              </figure>
+              <figure class="rigoni-carousel__slide rigoni-carousel__slide--shift-15">
+                <img src="../assets/images/doctora/neonatologia-rigoni.jpeg" alt="La Dra. Rigoni realizando atención oftalmológica neonatal" loading="lazy">
+                <figcaption>Atención oftalmológica neonatal.</figcaption>
+              </figure>
+              <figure class="rigoni-carousel__slide">
+                <img src="../assets/images/doctora/neonatologia-hospital-rigoni.jpeg" alt="La Dra. Rigoni en el área hospitalaria atendiendo a un recién nacido" loading="lazy">
+                <figcaption>Práctica hospitalaria y trabajo con recién nacidos.</figcaption>
+              </figure>
             </div>
-            <div class="rigoni-portrait-card__body">
-              <p class="rigoni-portrait-card__eyebrow">San Martín de los Andes</p>
-              <h2>Consulta oftalmológica integral</h2>
-              <p>
-                Atención clínica y estudios diagnósticos en Consultorios Médicos MABAC,
-                junto con práctica hospitalaria en neonatología y consultorios externos.
-              </p>
-            </div>
-          </article>
+          </div>
 
-          <aside class="rigoni-floating-card">
-            <img src="../assets/images/doctora/consulta-rigoni.webp" alt="La Dra. Rigoni realizando una consulta oftalmológica" loading="lazy">
-            <div>
-              <strong>Consulta + tecnología diagnóstica</strong>
-              <span>Un abordaje clínico acompañado por estudios específicos según cada caso.</span>
-            </div>
-          </aside>
+        </div>
+
+        <div class="rigoni-carousel__dots" aria-label="Seleccionar foto">
+          <button class="rigoni-carousel__dot is-active" type="button" data-carousel-dot aria-label="Ir a la foto 1" aria-current="true"></button>
+          <button class="rigoni-carousel__dot" type="button" data-carousel-dot aria-label="Ir a la foto 2"></button>
+          <button class="rigoni-carousel__dot" type="button" data-carousel-dot aria-label="Ir a la foto 3"></button>
+          <button class="rigoni-carousel__dot" type="button" data-carousel-dot aria-label="Ir a la foto 4"></button>
+          <button class="rigoni-carousel__dot" type="button" data-carousel-dot aria-label="Ir a la foto 5"></button>
+          <button class="rigoni-carousel__dot" type="button" data-carousel-dot aria-label="Ir a la foto 6"></button>
         </div>
       </div>
     </section>
 
-    <section class="rigoni-section rigoni-section--story" id="trayectoria">
-      <div class="rigoni-shell">
-        <div class="rigoni-section__intro" data-reveal>
-          <p class="rigoni-section__eyebrow">Trayectoria</p>
-          <h2 class="rigoni-section__title">Formación académica, práctica hospitalaria y trabajo en consultorio</h2>
-          <p class="rigoni-section__summary">
-            Su recorrido combina una base universitaria sólida, experiencia en instituciones de referencia y
-            una práctica orientada al diagnóstico, el seguimiento y el cuidado visual a lo largo de todas las etapas de la vida.
-          </p>
-        </div>
-
-        <div class="rigoni-story-grid">
-          <article class="rigoni-story-card" data-reveal>
-            <div class="rigoni-story-card__copy">
-              <p>
-                La Dra. Rigoni es médica egresada de la Universidad de Buenos Aires, donde también obtuvo su
-                especialización en Oftalmología en conjunto con la Sociedad Argentina de Oftalmología.
-              </p>
-              <p>
-                Cuenta con formación en instituciones de referencia como el Hospital Municipal de Trauma y Emergencias
-                Dr. Federico Alberto Abete y el Hospital Central de Pediatría Dr. Claudio Zin.
-              </p>
-              <p>
-                Luego de su formación hospitalaria, realizó una subespecialización en glaucoma bajo la dirección
-                del Dr. Negri Aranguren en Consultores Oftalmológicos.
-              </p>
-              <p>
-                Su enfoque combina formación académica de excelencia, experiencia hospitalaria y práctica en consultorio,
-                con el objetivo de ofrecer un abordaje integral en el cuidado de la salud visual.
-              </p>
-            </div>
-
-            <ul class="rigoni-highlights" aria-label="Puntos destacados de trayectoria">
-              <li>
-                <strong>Universidad de Buenos Aires</strong>
-                <span>Médica y especialista en Oftalmología junto a la Sociedad Argentina de Oftalmología.</span>
-              </li>
-              <li>
-                <strong>Formación hospitalaria</strong>
-                <span>Hospital Dr. Federico Alberto Abete y Hospital Central de Pediatría Dr. Claudio Zin.</span>
-              </li>
-              <li>
-                <strong>Subespecialización en glaucoma</strong>
-                <span>Realizada en Consultores Oftalmológicos bajo la dirección del Dr. Negri Aranguren.</span>
-              </li>
-            </ul>
-          </article>
-
-          <figure class="rigoni-story-figure" data-reveal>
-            <img src="../assets/images/doctora/consulta-rigoni.webp" alt="La Dra. Rigoni en una consulta con lámpara de hendidura" loading="lazy">
-            <figcaption>
-              Integra la consulta médica con tecnología diagnóstica para acompañar el diagnóstico y el seguimiento de las principales patologías oculares.
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="rigoni-section rigoni-section--formation">
-      <div class="rigoni-shell">
-        <div class="rigoni-section__intro" data-reveal>
-          <p class="rigoni-section__eyebrow">Formación complementaria</p>
-          <h2 class="rigoni-section__title">Especial dedicación al cuidado visual en la infancia</h2>
-          <p class="rigoni-section__summary">
-            La Dra. Rigoni es socia de la Sociedad Argentina de Oftalmología Infantil y cuenta con
-            formación complementaria específica en oftalmología infantil respaldada por certificados aportados para este sitio.
-          </p>
-        </div>
-
-        <div class="rigoni-formation-grid">
-          <article class="rigoni-timeline" data-reveal>
-            <div class="rigoni-timeline__item">
-              <p class="rigoni-timeline__label">Sociedad Argentina de Oftalmología Infantil</p>
-              <h3>Membresía activa</h3>
-              <p>Su pertenencia a la SAOI respalda su dedicación al cuidado de la salud visual en la infancia.</p>
-            </div>
-            <div class="rigoni-timeline__item">
-              <p class="rigoni-timeline__label">Oftalmopediatría</p>
-              <h3>Curso de Formación y Perfeccionamiento Expertise</h3>
-              <p>Realizado en 2021 y 2022, con foco en formación y perfeccionamiento en oftalmopediatría.</p>
-            </div>
-            <div class="rigoni-timeline__item">
-              <p class="rigoni-timeline__label">Facultad de Ciencias Médicas UCA</p>
-              <h3>Diplomatura Universitaria Básica en Oftalmología Infantil</h3>
-              <p>Aprobada en 2023, como parte de su recorrido de actualización y profundización en salud visual infantil.</p>
-            </div>
-          </article>
-
-          <div class="rigoni-certificate-grid" data-reveal>
-            <figure class="rigoni-certificate-card">
-              <img src="../assets/images/doctora/membresia-saoi-2026.jpeg" alt="Certificado de membresía de la Sociedad Argentina de Oftalmología Infantil" loading="lazy">
-              <figcaption>Certificado de membresía SAOI 2026.</figcaption>
-            </figure>
-            <figure class="rigoni-certificate-card">
-              <img src="../assets/images/doctora/expertise-oftalmopediatria.jpeg" alt="Certificado del curso de formación y perfeccionamiento en oftalmopediatría Expertise" loading="lazy">
-              <figcaption>Formación y perfeccionamiento en oftalmopediatría.</figcaption>
-            </figure>
-            <figure class="rigoni-certificate-card">
-              <img src="../assets/images/doctora/diplomatura-uca-oftalmologia-infantil.jpeg" alt="Diplomatura Universitaria Básica en Oftalmología Infantil de la UCA" loading="lazy">
-              <figcaption>Diplomatura universitaria en oftalmología infantil.</figcaption>
-            </figure>
+    <section class="rigoni-location" id="ubicacion" aria-labelledby="ubicacion-heading">
+      <div class="rigoni-shell rigoni-location__grid">
+        <article class="rigoni-location__card">
+          <p class="rigoni-section-label">Ubicación</p>
+          <h2 class="rigoni-section-title" id="ubicacion-heading">Ubicación en Consultorios Médicos MABAC</h2>
+          <p class="rigoni-location__copy">Rudecindo Roca 1066, San Martín de los Andes, Neuquén. COVA funciona dentro del centro médico MABAC.</p>
+          <p class="rigoni-location__copy">El acceso principal a la consulta se concentra aquí para que la información importante quede clara y a mano.</p>
+          <div class="rigoni-location__actions">
+            <a class="rigoni-location__link" href="https://maps.google.com/?q=Rudecindo+Roca+1066+San+Martin+de+los+Andes+Neuquen" target="_blank" rel="noopener">Cómo llegar</a>
+            <button class="rigoni-button rigoni-button--primary" type="button" data-open-contact-modal>Contacto</button>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section class="rigoni-section rigoni-section--care" id="atencion">
-      <div class="rigoni-shell">
-        <div class="rigoni-care-layout">
-          <div class="rigoni-care-copy" data-reveal>
-            <p class="rigoni-section__eyebrow">Atención</p>
-            <h2 class="rigoni-section__title">Una práctica que acompaña desde las primeras etapas de la vida</h2>
-            <p class="rigoni-section__summary">
-              Atiende a pacientes de todas las edades, desde recién nacidos hasta adultos, con especial foco en
-              patologías oftalmológicas infantiles y enfermedades oculares en adultos.
-            </p>
-
-            <div class="rigoni-care-grid">
-              <article class="rigoni-care-card">
-                <h3>Consulta clínica integral</h3>
-                <p>Atención oftalmológica para adultos y niños, con evaluación, diagnóstico y seguimiento según cada necesidad visual.</p>
-              </article>
-              <article class="rigoni-care-card">
-                <h3>Glaucoma</h3>
-                <p>Diagnóstico y seguimiento dentro de una práctica apoyada por estudios específicos y control evolutivo.</p>
-              </article>
-              <article class="rigoni-care-card">
-                <h3>Oftalmología infantil</h3>
-                <p>Trabajo orientado al cuidado visual en la infancia, con formación complementaria y participación en la SAOI.</p>
-              </article>
-              <article class="rigoni-care-card">
-                <h3>Neonatología y consultorios externos</h3>
-                <p>Actualmente se desempeña en el Hospital Dr. Ramón Carrillo, participando activamente del cuidado oftalmológico desde las primeras etapas de la vida.</p>
-              </article>
-            </div>
-          </div>
-
-          <div class="rigoni-care-visuals" data-reveal>
-            <figure class="rigoni-care-figure rigoni-care-figure--tall">
-              <img src="../assets/images/doctora/neonatologia-rigoni.jpeg" alt="La Dra. Rigoni realizando atención oftalmológica neonatal" loading="lazy">
-            </figure>
-            <figure class="rigoni-care-figure">
-              <img src="../assets/images/doctora/neonatologia-hospital-rigoni.jpeg" alt="La Dra. Rigoni en el área hospitalaria atendiendo a un recién nacido" loading="lazy">
-            </figure>
-            <figure class="rigoni-care-figure">
-              <img src="../assets/images/doctora/consulta-cartel-rigoni.jpeg" alt="La Dra. Rigoni en un espacio de atención visual" loading="lazy">
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="rigoni-section rigoni-section--studies" id="estudios">
-      <div class="rigoni-shell">
-        <div class="rigoni-section__intro" data-reveal>
-          <p class="rigoni-section__eyebrow">Estudios diagnósticos</p>
-          <h2 class="rigoni-section__title">Tecnología aplicada a la consulta oftalmológica</h2>
-          <p class="rigoni-section__summary">
-            En Consultorios Médicos MABAC, la atención clínica se complementa con estudios diagnósticos que
-            ayudan a evaluar, documentar y seguir la evolución de las principales patologías oculares.
-          </p>
-        </div>
-
-        <div class="rigoni-studies-grid">
-          <article class="rigoni-study-card" data-reveal>
-            <span class="rigoni-study-card__index">01</span>
-            <h3>OCT</h3>
-            <p>Tomografía de Coherencia Óptica para evaluar retina, mácula y nervio óptico con gran nivel de detalle.</p>
-          </article>
-          <article class="rigoni-study-card" data-reveal>
-            <span class="rigoni-study-card__index">02</span>
-            <h3>Topografía corneal</h3>
-            <p>Mapa preciso de la córnea para diagnóstico, seguimiento y valoración de la superficie ocular.</p>
-          </article>
-          <article class="rigoni-study-card" data-reveal>
-            <span class="rigoni-study-card__index">03</span>
-            <h3>Campimetría computarizada</h3>
-            <p>Estudio del campo visual especialmente útil en el seguimiento de glaucoma y otras alteraciones funcionales.</p>
-          </article>
-          <article class="rigoni-study-card" data-reveal>
-            <span class="rigoni-study-card__index">04</span>
-            <h3>Retinografía digital</h3>
-            <p>Registro fotográfico del fondo de ojo para documentar hallazgos y comparar la evolución entre controles.</p>
-          </article>
-          <article class="rigoni-study-card" data-reveal>
-            <span class="rigoni-study-card__index">05</span>
-            <h3>Autorefractometría</h3>
-            <p>Medición objetiva de la graduación ocular como apoyo para la evaluación refractiva y la indicación óptica.</p>
-          </article>
-          <article class="rigoni-study-card" data-reveal>
-            <span class="rigoni-study-card__index">06</span>
-            <h3>Paquimetría</h3>
-            <p>Medición del espesor corneal, de utilidad en controles de glaucoma y valoración integral de la córnea.</p>
-          </article>
-          <article class="rigoni-study-card" data-reveal>
-            <span class="rigoni-study-card__index">07</span>
-            <h3>Ecómetro</h3>
-            <p>Medición biométrica ocular realizada con equipamiento específico para aportar datos al diagnóstico clínico.</p>
-          </article>
-          <article class="rigoni-study-card" data-reveal>
-            <span class="rigoni-study-card__index">08</span>
-            <h3>Ecometría</h3>
-            <p>Estudio complementario para planificación y evaluación diagnóstica dentro de una práctica integral.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="rigoni-section rigoni-section--contact" id="contacto">
-      <div class="rigoni-shell">
-        <div class="rigoni-contact-grid">
-          <article class="rigoni-contact-panel" data-reveal>
-            <p class="rigoni-section__eyebrow">Turnos y contacto</p>
-            <h2 class="rigoni-section__title">Atención en Consultorios Médicos MABAC</h2>
-            <p class="rigoni-contact-panel__text">
-              Actualmente atiende en Consultorios Médicos MABAC, ubicados en el centro de la ciudad,
-              donde realiza tanto la atención clínica como estudios diagnósticos de las principales patologías oculares.
-            </p>
-
-            <a class="rigoni-contact-panel__phone" href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" target="_blank" rel="noopener">
-              +54 9 2944 39-1924
-            </a>
-
-            <div class="rigoni-contact-panel__actions">
-              <a class="rigoni-button rigoni-button--solid" href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" target="_blank" rel="noopener">Pedir turno por WhatsApp</a>
-              <a class="rigoni-button rigoni-button--ghost rigoni-button--light" href="../index.html">Ver sitio de COVA</a>
-            </div>
-          </article>
-
-          <div class="rigoni-contact-side" data-reveal>
-            <div class="rigoni-detail-card">
-              <span class="rigoni-detail-card__label">Ubicación</span>
-              <h3>Rudecindo Roca 1066</h3>
-              <p>Q8370 San Martín de los Andes, Neuquén. COVA funciona dentro del centro médico MABAC.</p>
-              <a href="https://maps.google.com/?q=Rudecindo+Roca+1066+San+Martin+de+los+Andes+Neuquen" target="_blank" rel="noopener">Cómo llegar</a>
-            </div>
-
-            <div class="rigoni-detail-card">
-              <span class="rigoni-detail-card__label">Instagram</span>
-              <h3>@dramjulianarigoni</h3>
-              <p>Publicaciones e información vinculadas a su práctica profesional y educación en salud visual.</p>
-              <a href="https://www.instagram.com/dramjulianarigoni/?hl=es" target="_blank" rel="noopener">Abrir perfil</a>
-            </div>
-
-            <div class="rigoni-detail-card rigoni-detail-card--image">
-              <img src="../assets/images/doctora/doctora-rigoni-parada.jpeg" alt="La Dra. Rigoni en el consultorio junto al equipamiento oftalmológico" loading="lazy">
-            </div>
-          </div>
+        <div class="rigoni-location__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.1!2d-71.35285!3d-40.15695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610b3c3a1234567%3A0xabcdef!2sRudecindo%20Roca%201066%2C%20San%20Mart%C3%ADn%20de%20los%20Andes%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v170000" title="Consultorios Médicos MABAC" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="rigoni-modal" id="contactModal" aria-hidden="true">
+    <div class="rigoni-modal__backdrop" data-close-contact-modal></div>
+    <div class="rigoni-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+      <button class="rigoni-modal__close" type="button" aria-label="Cerrar" data-close-contact-modal>&times;</button>
+      <p class="rigoni-modal__eyebrow">Contacto</p>
+      <h2 class="rigoni-modal__title" id="contactModalTitle">Hacer una consulta</h2>
+      <p class="rigoni-modal__copy">Podés dejar una consulta por mail o comunicarte por WhatsApp con COVA.</p>
+
+      <form class="rigoni-contact-form" id="contactForm">
+        <label class="rigoni-contact-form__field">
+          <span>Nombre</span>
+          <input type="text" name="name" placeholder="Tu nombre">
+        </label>
+
+        <label class="rigoni-contact-form__field">
+          <span>Correo electrónico</span>
+          <input type="email" name="email" placeholder="nombre@correo.com">
+        </label>
+
+        <label class="rigoni-contact-form__field">
+          <span>Consulta</span>
+          <textarea name="message" rows="5" placeholder="Escribí tu consulta acá."></textarea>
+        </label>
+
+        <button class="rigoni-button rigoni-button--primary" type="submit">Enviar por mail</button>
+        <p class="rigoni-contact-form__note" id="contactFormNote" aria-live="polite" hidden>Placeholder: este formulario todavía no envía mails reales.</p>
+      </form>
+
+      <a class="rigoni-button rigoni-button--ghost rigoni-button--stretch" href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20hacer%20una%20consulta" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    </div>
+  </div>
+
   <footer class="rigoni-footer">
     <div class="rigoni-shell rigoni-footer__inner">
-      <div>
-        <p class="rigoni-footer__eyebrow">Dra. María Juliana Rigoni</p>
-        <p class="rigoni-footer__copy">
-          Médica oftalmóloga y cirujana. Atención de recién nacidos, niños y adultos en San Martín de los Andes.
-        </p>
-      </div>
-      <div class="rigoni-footer__links">
-        <a href="#inicio">Inicio</a>
-        <a href="#trayectoria">Trayectoria</a>
-        <a href="#estudios">Estudios</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+      <p class="rigoni-footer__copy">Dra. María Juliana Rigoni · Oftalmología en San Martín de los Andes.</p>
+      <a class="rigoni-footer__link" href="../index.html">Ver sitio de COVA</a>
     </div>
   </footer>
-
-  <a class="rigoni-wa-bubble" href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" target="_blank" rel="noopener" aria-label="Solicitar turno por WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-    </svg>
-  </a>
 
   <script src="./script.js" defer></script>
 </body>
