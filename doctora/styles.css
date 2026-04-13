@@ -308,6 +308,10 @@ textarea {
   object-position: center 20%;
 }
 
+.rigoni-carousel__slide--shift-45 img {
+  object-position: center 45%;
+}
+
 .rigoni-carousel__slide--shift-15 img {
   object-position: center 35%;
 }
