@@ -14,15 +14,12 @@
   <header class="pv-header" role="banner">
     <div class="pv-header__inner">
       <a href="#inicio" class="pv-logo" aria-label="COVA — Inicio">
-        <span class="pv-logo__badge">COVA</span>
-        <span class="pv-logo__text">
-          <strong>Centro Oftalmológico</strong>
-          <span>Visión Andina</span>
-        </span>
+        <img class="pv-logo__image" src="./imgs%20COVA/visionAndinaIsoLogo.png" alt="" loading="eager">
       </a>
       <nav class="pv-nav" aria-label="Navegación principal">
         <a href="#equipo">Equipo</a>
         <a href="#estudios">Estudios</a>
+        <a href="./junin/">Junín</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="pv-header__actions">
@@ -37,6 +34,7 @@
   <nav class="pv-mobile-menu" id="mobileMenu" aria-label="Menú móvil">
     <a href="#equipo" onclick="closeMenu()">Equipo</a>
     <a href="#estudios" onclick="closeMenu()">Estudios</a>
+    <a href="./junin/" onclick="closeMenu()">Junín</a>
     <a href="#contacto" onclick="closeMenu()">Contacto</a>
     <a href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" class="btn-primary" target="_blank" rel="noopener" onclick="closeMenu()">Solicitar turno</a>
   </nav>
@@ -197,13 +195,33 @@
               <p class="pv-study-card__eyebrow">Equipo en consultorio</p>
             </div>
           </div>
-          <button class="pv-afeccion-cta pv-study-trigger" type="button" data-study-title="Refractómetro infantil Plusoptix" data-study-body="Estudio realizado con refractómetro infantil Plusoptix para obtener una medición objetiva de la graduación visual, especialmente útil en la evaluación oftalmológica pediátrica." data-study-image="./equipos%20imagenes/refractrometro%20infantil.jpeg" data-study-image-alt="Equipo de refractómetro infantil Plusoptix">
+          <button class="pv-afeccion-cta pv-study-trigger" type="button" data-study-title="Refractómetro infantil Plusoptix" data-study-body="El refractómetro infantil Plusoptix es un dispositivo de cribado visual portátil&#10;(fotorrefractómetro) diseñado para detectar rápidamente errores refractivos y&#10;problemas oculares en niños pequeños, bebés y pacientes no colaboradores.&#10;Mide ambos ojos simultáneamente a un metro de distancia en segundos,&#10;detectando miopía, hipermetropía, astigmatismo, anisometropía, anisocoria y&#10;estrabismo" data-study-image="./equipos%20imagenes/refractrometro%20infantil.jpeg" data-study-image-alt="Equipo de refractómetro infantil Plusoptix">
             Ver detalle
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
           </button>
         </article>
       </div>
 
+    </section>
+
+    <section class="pv-junin-spotlight" aria-labelledby="junin-heading">
+      <div class="pv-junin-spotlight__inner">
+        <div class="pv-junin-spotlight__copy">
+          <p class="pv-section-eyebrow">Estudios en Junín</p>
+          <h2 class="pv-section-heading" id="junin-heading">Una página aparte<br>para Junín de los Andes</h2>
+          <p class="pv-section-lead">También realizamos estudios oftalmológicos en Junín de los Andes. Para que la información no se mezcle con la sede principal, dejamos una página específica con dirección, mapa y estudios disponibles.</p>
+        </div>
+
+        <article class="pv-junin-spotlight__card">
+          <span class="pv-junin-spotlight__label">Dirección</span>
+          <p class="pv-junin-spotlight__address">Cnel. Suárez 120 · Q8371 Junín de los Andes, Neuquén</p>
+          <p class="pv-junin-spotlight__note">Consultá la sede, el mapa y los estudios que realizamos en Junín desde una página separada.</p>
+          <div class="pv-junin-spotlight__actions">
+            <a href="./junin/" class="btn-primary">Ver estudios en Junín</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Cnel.%20Su%C3%A1rez%20120%2C%20Q8371%20Jun%C3%ADn%20de%20los%20Andes%2C%20Neuqu%C3%A9n" target="_blank" rel="noopener" class="btn-outline btn-outline-light">Cómo llegar</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <div class="pv-modal" id="studyModal" aria-hidden="true">
@@ -232,7 +250,7 @@
             <p class="pv-contact__panel-hours">Horario de atención: lunes a viernes de 9 a 16 h.</p>
             <div class="pv-contact__ctas">
               <a href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" class="btn-primary" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>Solicitar turno por WhatsApp</a>
-              <a href="./doctora/" class="btn-outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path></svg>Conocer a la Dra. Rigoni</a>
+              <a href="mailto:info@visionandina.com.ar" class="btn-outline btn-outline-light">Escribir por mail</a>
             </div>
           </article>
 
@@ -246,12 +264,21 @@
             </article>
 
             <article class="pv-contact__detail-card">
+              <div class="pv-contact__detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path></svg></div>
+              <div>
+                <span class="pv-contact__detail-label">Correo</span>
+                <div class="pv-contact__detail-links">
+                  <a href="mailto:info@visionandina.com.ar">info@visionandina.com.ar</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="pv-contact__detail-card">
               <div class="pv-contact__detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></div>
               <div>
                 <span class="pv-contact__detail-label">Instagram</span>
                 <div class="pv-contact__detail-links">
-                  <a href="https://www.instagram.com/centrovisionandina?igsh=bHh6aDZhdWwwMnI=" target="_blank" rel="noopener">@centrovisionandina</a>
-                  <a href="https://www.instagram.com/consultoriosmabac/?hl=es" target="_blank" rel="noopener">MABAC</a>
+                  <a href="https://www.instagram.com/centrovisionandina?igsh=bHh6aDZhdWwwMnI=" target="_blank" rel="noopener">VisionAndina</a>
                 </div>
               </div>
             </article>
@@ -270,10 +297,10 @@
           </article>
 
           <div class="pv-contact__map-wrap">
-            <div class="pv-contact__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.1!2d-71.35285!3d-40.15695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610b3c3a1234567%3A0xabcdef!2sRudecindo%20Roca%201066%2C%20San%20Mart%C3%ADn%20de%20los%20Andes%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v170000" title="COVA — Rudecindo Roca 1066, San Martín de los Andes" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+            <div class="pv-contact__map"><iframe src="https://www.google.com/maps?output=embed&amp;q=MABAC%20Rudecindo%20Roca%201066%2C%20Q8370%20San%20Mart%C3%ADn%20de%20los%20Andes%2C%20Neuqu%C3%A9n" title="COVA — MABAC Rudecindo Roca 1066, Q8370" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
             <div class="pv-contact__map-footer">
-              <div class="pv-contact__map-address"><strong>COVA en MABAC</strong>Rudecindo Roca 1066 · San Martín de los Andes</div>
-              <a href="https://maps.google.com/?q=Rudecindo+Roca+1066+San+Martin+de+los+Andes+Neuquen" target="_blank" rel="noopener" class="pv-contact__map-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Cómo llegar</a>
+              <div class="pv-contact__map-address"><strong>COVA en MABAC</strong>Rudecindo Roca 1066 · Q8370 San Martín de los Andes</div>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=MABAC%20Rudecindo%20Roca%201066%2C%20Q8370%20San%20Mart%C3%ADn%20de%20los%20Andes%2C%20Neuqu%C3%A9n" target="_blank" rel="noopener" class="pv-contact__map-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Cómo llegar</a>
             </div>
           </div>
         </div>
@@ -285,18 +312,15 @@
     <div class="pv-footer__inner">
       <div class="pv-footer__top">
         <div class="pv-footer__brand">
-          <div class="pv-footer__brand-lockup">
-            <span class="pv-logo__badge pv-logo__badge--footer">COVA</span>
-            <div class="pv-footer__brand-copy">
-              <strong>Centro Oftalmológico</strong>
-              <span>Visión Andina</span>
-            </div>
-          </div>
+          <a href="#inicio" class="pv-footer__brand-lockup" aria-label="COVA — Inicio">
+            <img class="pv-logo__image pv-logo__image--footer" src="./imgs%20COVA/visionAndinaIsoLogo.png" alt="" loading="lazy">
+          </a>
           <p class="pv-footer__brand-desc">Centro oftalmológico con atención clínica y estudios diagnósticos en San Martín de los Andes, Neuquén.</p>
           <div class="pv-footer__brand-contact">
             <a href="tel:+5492944391924"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+54 9 2944 39-1924</a>
             <a href="https://wa.me/5492944391924?text=Hola%2C%20quisiera%20solicitar%20un%20turno" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>WhatsApp</a>
-            <a href="https://www.instagram.com/centrovisionandina?igsh=bHh6aDZhdWwwMnI=" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>Instagram</a>
+            <a href="mailto:info@visionandina.com.ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path></svg>info@visionandina.com.ar</a>
+            <a href="https://www.instagram.com/centrovisionandina?igsh=bHh6aDZhdWwwMnI=" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>Instagram · VisionAndina</a>
           </div>
         </div>
 
@@ -313,6 +337,7 @@
           <a href="#estudios">Campimetría</a>
           <a href="#estudios">Retinografía digital</a>
           <a href="#estudios">Autorefractometría</a>
+          <a href="./junin/">Estudios en Junín</a>
         </div>
 
         <div class="pv-footer__col">
