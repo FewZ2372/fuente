@@ -950,173 +950,6 @@ body {
   white-space: pre-line;
 }
 
-.pv-junin-spotlight {
-  padding: 0 24px 96px;
-}
-
-.pv-junin-spotlight__inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  gap: 28px;
-  align-items: end;
-  padding: 34px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #eef7f6 0%, #ffffff 55%, #edf5f4 100%);
-  border: 1px solid rgba(var(--brand-rgb), 0.12);
-  box-shadow: 0 20px 50px rgba(var(--brand-rgb), 0.08);
-}
-
-.pv-junin-spotlight__copy .pv-section-eyebrow,
-.pv-junin-overview__card .pv-section-eyebrow {
-  color: var(--brand-primary);
-}
-
-.pv-junin-spotlight__copy .pv-section-heading,
-.pv-junin-overview__card .pv-section-heading {
-  color: var(--text-dark);
-}
-
-.pv-junin-spotlight__copy .pv-section-lead,
-.pv-junin-overview__card .pv-section-lead {
-  margin-bottom: 0;
-  color: var(--text-mid);
-}
-
-.pv-junin-spotlight__card,
-.pv-junin-overview__card {
-  border-radius: 28px;
-  border: 1px solid rgba(var(--brand-rgb), 0.12);
-  box-shadow: 0 18px 46px rgba(var(--brand-rgb), 0.1);
-}
-
-.pv-junin-spotlight__card {
-  padding: 28px;
-  background: linear-gradient(145deg, var(--brand-primary), var(--brand-dark));
-  color: #fff;
-}
-
-.pv-junin-spotlight__label,
-.pv-junin-overview__detail span {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.pv-junin-spotlight__label {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.pv-junin-spotlight__address {
-  margin: 14px 0 10px;
-  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: #fff;
-}
-
-.pv-junin-spotlight__note {
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.pv-junin-spotlight__actions,
-.pv-junin-overview__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.pv-junin-spotlight__actions .btn-primary {
-  background: #fff;
-  color: var(--brand-primary) !important;
-}
-
-.pv-junin-spotlight__actions .btn-primary:hover {
-  background: var(--brand-light);
-  color: var(--brand-dark) !important;
-}
-
-.pv-junin-hero {
-  position: relative;
-  padding: 128px 24px 78px;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at top left, rgba(var(--brand-accent-rgb), 0.16), transparent 28%),
-    radial-gradient(circle at right center, rgba(var(--brand-rgb), 0.1), transparent 30%),
-    linear-gradient(180deg, #f8fbfa 0%, #eef5f4 100%);
-}
-
-.pv-junin-hero::before {
-  content: "";
-  position: absolute;
-  inset: auto -120px -140px auto;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: rgba(var(--brand-rgb), 0.08);
-  filter: blur(10px);
-}
-
-.pv-junin-hero__inner,
-.pv-junin-overview__inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.pv-junin-hero .pv-hero__h1,
-.pv-junin-hero .pv-hero__subtitle,
-.pv-junin-hero .pv-hero__kicker {
-  color: var(--text-dark);
-}
-
-.pv-junin-hero .pv-hero__subtitle {
-  max-width: 60ch;
-  color: var(--text-mid);
-}
-
-.pv-junin-overview {
-  padding: 0 24px 96px;
-}
-
-.pv-junin-overview__inner {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 28px;
-  align-items: start;
-}
-
-.pv-junin-overview__card {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.98);
-}
-
-.pv-junin-overview__details {
-  display: grid;
-  gap: 18px;
-  margin-top: 24px;
-}
-
-.pv-junin-overview__detail span {
-  color: rgba(var(--brand-rgb), 0.8);
-}
-
-.pv-junin-overview__detail p {
-  margin: 8px 0 0;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.6;
-  color: var(--text-dark);
-}
-
 .pv-contact {
   background: linear-gradient(180deg, #fff 0%, var(--brand-soft) 100%);
   padding: 96px 24px;
@@ -1584,11 +1417,6 @@ body {
 }
 
 @media (max-width: 900px) {
-  .pv-junin-spotlight__inner,
-  .pv-junin-overview__inner {
-    grid-template-columns: 1fr;
-  }
-
   .pv-doctor-card {
     flex-direction: column;
     min-height: unset;
@@ -1689,24 +1517,6 @@ body {
   .pv-services,
   .pv-contact {
     padding: 64px 20px;
-  }
-
-  .pv-junin-hero {
-    padding: 104px 20px 64px;
-  }
-
-  .pv-junin-spotlight {
-    padding: 0 20px 72px;
-  }
-
-  .pv-junin-overview {
-    padding: 0 20px 72px;
-  }
-
-  .pv-junin-spotlight__inner,
-  .pv-junin-spotlight__card,
-  .pv-junin-overview__card {
-    padding: 24px;
   }
 
   .pv-services__grid {
@@ -1845,20 +1655,6 @@ body {
   .pv-hero__ctas .btn-primary,
   .pv-hero__ctas .btn-outline {
     text-align: center;
-    justify-content: center;
-  }
-
-  .pv-junin-spotlight__actions,
-  .pv-junin-overview__actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .pv-junin-spotlight__actions .btn-primary,
-  .pv-junin-spotlight__actions .btn-outline,
-  .pv-junin-overview__actions .btn-primary,
-  .pv-junin-overview__actions .btn-outline {
-    width: 100%;
     justify-content: center;
   }
 
