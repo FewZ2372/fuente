@@ -843,6 +843,207 @@ body {
   cursor: pointer;
 }
 
+.pv-junin-spotlight {
+  padding: 0 24px 96px;
+  background: #f7fafa;
+}
+
+.pv-junin-spotlight__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.pv-junin-spotlight__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pv-junin-spotlight__copy .pv-section-eyebrow,
+.pv-junin-overview__card .pv-section-eyebrow {
+  color: var(--brand-primary);
+  text-align: left;
+}
+
+.pv-junin-spotlight__copy .pv-section-heading,
+.pv-junin-overview__card .pv-section-heading {
+  color: var(--text-dark);
+  text-align: left;
+}
+
+.pv-junin-spotlight__copy .pv-section-lead,
+.pv-junin-overview__card .pv-section-lead {
+  margin: 0;
+  color: var(--text-mid);
+  text-align: left;
+}
+
+.pv-junin-spotlight__card,
+.pv-junin-overview__card {
+  border-radius: 28px;
+  border: 1px solid rgba(var(--brand-rgb), 0.12);
+  box-shadow: 0 18px 48px rgba(var(--brand-rgb), 0.12);
+}
+
+.pv-junin-spotlight__card {
+  padding: 30px;
+  background: linear-gradient(145deg, var(--brand-primary), var(--brand-dark));
+  color: #fff;
+}
+
+.pv-junin-spotlight__label,
+.pv-junin-overview__detail span {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pv-junin-spotlight__label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.pv-junin-spotlight__address {
+  margin: 14px 0 10px;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.pv-junin-spotlight__note {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.pv-junin-spotlight__actions,
+.pv-junin-overview__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.pv-junin-spotlight__actions .btn-primary {
+  background: #fff;
+  color: var(--brand-primary) !important;
+}
+
+.pv-junin-spotlight__actions .btn-primary:hover {
+  background: var(--brand-light);
+  color: var(--brand-dark) !important;
+}
+
+.pv-junin-hero {
+  position: relative;
+  padding: 128px 24px 78px;
+  background:
+    radial-gradient(circle at top right, rgba(var(--brand-accent-rgb), 0.18), transparent 32%),
+    linear-gradient(180deg, #f7fafa 0%, #eef7f7 100%);
+}
+
+.pv-junin-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.pv-junin-hero__inner,
+.pv-junin-overview__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pv-junin-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pv-junin-hero .pv-hero__tag {
+  color: var(--brand-primary);
+  background: rgba(var(--brand-accent-rgb), 0.1);
+  border-color: rgba(var(--brand-accent-rgb), 0.22);
+}
+
+.pv-junin-hero .pv-hero__kicker,
+.pv-junin-hero .pv-hero__h1,
+.pv-junin-hero .pv-hero__subtitle {
+  color: var(--text-dark);
+  text-shadow: none;
+}
+
+.pv-junin-hero .pv-hero__subtitle {
+  max-width: 62ch;
+  color: var(--text-mid);
+}
+
+.pv-junin-overview {
+  padding: 0 24px 96px;
+  background: linear-gradient(180deg, #eef7f7 0%, #ffffff 100%);
+}
+
+.pv-junin-overview__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.pv-junin-overview__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.pv-junin-overview__details {
+  display: grid;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.pv-junin-overview__detail span {
+  color: rgba(var(--brand-rgb), 0.8);
+}
+
+.pv-junin-overview__detail p {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+}
+
+.pv-junin-overview .pv-contact__map-panel {
+  height: 100%;
+}
+
+.pv-junin-overview .pv-contact__location-card {
+  flex-shrink: 0;
+}
+
+.pv-junin-overview .pv-contact__map-wrap {
+  flex: 1;
+  min-height: 0;
+}
+
+.pv-junin-overview .pv-contact__map {
+  flex: 1;
+  height: auto;
+  min-height: 280px;
+}
+
 @media (min-width: 1025px) {
   .pv-services__grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1453,6 +1654,11 @@ body {
   .pv-contact__map {
     height: 320px;
   }
+
+  .pv-junin-spotlight__inner,
+  .pv-junin-overview__inner {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1517,6 +1723,20 @@ body {
   .pv-services,
   .pv-contact {
     padding: 64px 20px;
+  }
+
+  .pv-junin-hero {
+    padding: 104px 20px 64px;
+  }
+
+  .pv-junin-spotlight,
+  .pv-junin-overview {
+    padding: 0 20px 72px;
+  }
+
+  .pv-junin-spotlight__card,
+  .pv-junin-overview__card {
+    padding: 24px;
   }
 
   .pv-services__grid {
@@ -1655,6 +1875,20 @@ body {
   .pv-hero__ctas .btn-primary,
   .pv-hero__ctas .btn-outline {
     text-align: center;
+    justify-content: center;
+  }
+
+  .pv-junin-spotlight__actions,
+  .pv-junin-overview__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pv-junin-spotlight__actions .btn-primary,
+  .pv-junin-spotlight__actions .btn-outline,
+  .pv-junin-overview__actions .btn-primary,
+  .pv-junin-overview__actions .btn-outline {
+    width: 100%;
     justify-content: center;
   }
 

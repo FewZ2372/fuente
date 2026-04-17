@@ -72,9 +72,10 @@ if (carousel) {
 
 const contactModal = document.getElementById('contactModal');
 const contactForm = document.getElementById('contactForm');
-const contactFormNote = document.getElementById('contactFormNote');
+const contactMailLink = document.getElementById('contactMailLink');
 const openContactButtons = document.querySelectorAll('[data-open-contact-modal]');
 const closeContactTargets = document.querySelectorAll('[data-close-contact-modal]');
+const contactEmail = 'info@visionandina.com.ar';
 
 function setContactModalState(isOpen) {
   if (!contactModal) {
@@ -87,20 +88,53 @@ function setContactModalState(isOpen) {
 }
 
 openContactButtons.forEach((button) => {
-  button.addEventListener('click', () => setContactModalState(true));
+  button.addEventListener('click', () => {
+    setMenuState(false);
+    setContactModalState(true);
+  });
 });
 
 closeContactTargets.forEach((target) => {
   target.addEventListener('click', () => setContactModalState(false));
 });
 
+function buildContactMailto() {
+  if (!contactForm) {
+    return `mailto:${contactEmail}`;
+  }
+
+  const formData = new FormData(contactForm);
+  const name = String(formData.get('name') || '').trim();
+  const email = String(formData.get('email') || '').trim();
+  const message = String(formData.get('message') || '').trim();
+  const subject = 'Consulta desde el sitio de la Dra. Rigoni';
+  const body = [
+    `Nombre: ${name || '-'}`,
+    `Correo electrónico: ${email || '-'}`,
+    '',
+    'Consulta:',
+    message || '-',
+  ].join('\n');
+
+  return `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function updateContactMailLink() {
+  if (!contactMailLink) {
+    return;
+  }
+
+  contactMailLink.href = buildContactMailto();
+}
+
+contactForm?.addEventListener('input', updateContactMailLink);
+contactMailLink?.addEventListener('click', updateContactMailLink);
 contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
-
-  if (contactFormNote) {
-    contactFormNote.hidden = false;
-  }
+  updateContactMailLink();
+  contactMailLink?.click();
 });
+updateContactMailLink();
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
