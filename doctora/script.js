@@ -75,7 +75,7 @@ const contactForm = document.getElementById('contactForm');
 const contactMailLink = document.getElementById('contactMailLink');
 const openContactButtons = document.querySelectorAll('[data-open-contact-modal]');
 const closeContactTargets = document.querySelectorAll('[data-close-contact-modal]');
-const contactEmail = 'info@visionandina.com.ar';
+const contactEmail = 'dramariajulianarigoni@gmail.com';
 
 function setContactModalState(isOpen) {
   if (!contactModal) {
